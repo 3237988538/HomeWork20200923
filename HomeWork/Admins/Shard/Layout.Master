@@ -114,16 +114,8 @@
 			</div>
 			<!-- END LEFT SIDEBAR -->
 			<!-- MAIN -->
-			<div class="main">
-				<!-- MAIN CONTENT -->
-				<div class="main-content">
-					<div class="container-fluid">
-						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-						</asp:ContentPlaceHolder>
-					</div>
-				</div>
-				<!-- END MAIN CONTENT -->
-			</div>
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+			</asp:ContentPlaceHolder>
 			<!-- END MAIN -->
 			<div class="clearfix"></div>
 			<footer>

@@ -7,38 +7,56 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace HomeWork.Shared
+namespace HomeWork.Admins.Users
 {
 
 
-	public partial class backend
+	public partial class EditUsers
 	{
 
 		/// <summary>
-		/// head 控件。
+		/// Account 控件。
 		/// </summary>
 		/// <remarks>
 		/// 自动生成的字段。
 		/// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+		protected global::System.Web.UI.WebControls.TextBox Account;
 
 		/// <summary>
-		/// form1 控件。
+		/// Password 控件。
 		/// </summary>
 		/// <remarks>
 		/// 自动生成的字段。
 		/// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+		protected global::System.Web.UI.WebControls.TextBox Password;
 
 		/// <summary>
-		/// ContentPlaceHolder1 控件。
+		/// NickName 控件。
 		/// </summary>
 		/// <remarks>
 		/// 自动生成的字段。
 		/// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+		protected global::System.Web.UI.WebControls.TextBox NickName;
+
+		/// <summary>
+		/// Photo 控件。
+		/// </summary>
+		/// <remarks>
+		/// 自动生成的字段。
+		/// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox Photo;
+
+		/// <summary>
+		/// Button1 控件。
+		/// </summary>
+		/// <remarks>
+		/// 自动生成的字段。
+		/// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Button Button1;
 	}
 }
