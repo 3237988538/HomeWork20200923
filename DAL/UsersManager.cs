@@ -121,13 +121,13 @@ namespace DAL
 
 		public List<Users> GetRolesByNickName(string NickName)
 		{
-			string sql = "select * from Users where Users_DeleteId = 1 and NickName like '%@NickName%'";
+			string sql = "select * from Users where Users_DeleteId = 1 and Users_NickName like '%@NickName%'";
 
 			SqlParameter[] param =
 			{
 				new SqlParameter("@NickName",NickName)
 			};
-			var dt = SqlHelper.Query(sql, null);
+			var dt = SqlHelper.Query(sql, param);
 			return FillData(dt);
 		}
 

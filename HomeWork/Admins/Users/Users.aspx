@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admins/Shard/Layout.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="HomeWork.Admins.Users.WebForm1" %>
 
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -38,6 +40,17 @@
 							</asp:Repeater>
 						</tbody>
 					</table>
+					<div class="row col-md-10 col-md-offset-1">
+						<webdiyer:AspNetPager
+							ID="AspNetPager1" runat="server" CssClass="pager" CurrentPageButtonClass="cpb"
+							CustomInfoTextAlign="Left" HorizontalAlign="Right" PageIndexBoxType="TextBox"
+							ShowCustomInfoSection="Left" ShowMoreButtons="False" ShowNavigationToolTip="true"
+							Show PageIndexBox="Always"
+							AlwaysShow="true" PageSize="2" ShowInputBox="Always" LayoutType="Table" OnPageChanging="AspNetPager1_PageChanging"
+							FirstPageText="首页" LastPageText="尾页" NextPageText="下一页" PrevPageText="上一页"
+							PagingButtonSpacing="2px">
+						</webdiyer:AspNetPager>
+					</div>
 				</div>
 			</div>
 		</div>

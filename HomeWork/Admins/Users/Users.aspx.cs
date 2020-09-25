@@ -15,8 +15,37 @@ namespace HomeWork.Admins.Users
 		{
 			if (IsPostBack)
 				return;
-			Repeater1.DataSource = user.GetAll();
-			Repeater1.DataBind();
+			var list = user.GetAll();
+			PagedDataSource pds = new PagedDataSource();
+			pds.DataSource = list;
+			pds.AllowPaging = true;
+			pds.CurrentPageIndex = AspNetPager1.PageSize - 1;
+			pds.PageSize = AspNetPager1.PageSize;
+			AspNetPager1.RecordCount = list.Count;
+			this.Repeater1.DataSource = pds;
+			this.Repeater1.DataBind();
+		}
+		public void Bind(string nickname)
+		{
+
+			var list = user.GetRolesByNickName("");
+
+			PagedDataSource pds = new PagedDataSource();
+			pds.DataSource = list;
+			pds.AllowPaging = true;
+			pds.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
+			pds.PageSize = AspNetPager1.PageSize;
+			AspNetPager1.RecordCount = list.Count;
+
+			this.Repeater1.DataSource = pds;
+			this.Repeater1.DataBind();
+		}
+
+		protected void AspNetPager1_PageChanging(object src, Wuqi.Webdiyer.PageChangingEventArgs e)
+		{
+
+			AspNetPager1.CurrentPageIndex = e.NewPageIndex;
+			Bind("");
 		}
 	}
 }

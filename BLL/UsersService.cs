@@ -94,7 +94,9 @@ namespace BLL
         /// <returns></returns>
         public List<Users> GetRolesByNickName(string NickName)
         {
-            return rm.GetRolesByNickName(NickName);
+            if(NickName.Length != 0)
+                return rm.GetRolesByNickName(NickName);
+            return rm.GetAll();
         }
 
         /// <summary>
